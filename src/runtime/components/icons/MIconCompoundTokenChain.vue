@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed } from 'vue'
+import { computed, ref, watch } from 'vue'
 import type { TokenName, ChainName } from '../../types'
 
 import MIconTokenUsdc from './tokens/MIconTokenUsdc.vue'
@@ -82,6 +82,8 @@ const props = defineProps<{
   token: TokenName | string
   chain: ChainName | string
   size?: number
+  tokenImage?: string
+  chainImage?: string
 }>()
 
 const size = computed(() => props.size ?? 32)
@@ -91,6 +93,14 @@ const chainComponent = computed(() => chainComponents[props.chain] ?? MIconChain
 const badgeSize = computed(() => Math.round(size.value * 0.44))
 const badgeOffset = computed(() => -Math.round(size.value * 0.06))
 const badgeBorder = computed(() => Math.max(1, Math.round(size.value * 0.06)))
+
+const tokenImageFailed = ref(false)
+const chainImageFailed = ref(false)
+watch(() => props.tokenImage, () => { tokenImageFailed.value = false })
+watch(() => props.chainImage, () => { chainImageFailed.value = false })
+
+const showTokenImage = computed(() => !!props.tokenImage && !tokenImageFailed.value)
+const showChainImage = computed(() => !!props.chainImage && !chainImageFailed.value)
 </script>
 
 <template>
@@ -99,7 +109,17 @@ const badgeBorder = computed(() => Math.max(1, Math.round(size.value * 0.06)))
     :style="{ width: `${size}px`, height: `${size}px` }"
   >
     <span class="m-compound-icon__token overflow-hidden rounded-full inline-flex">
-      <component :is="tokenComponent" :size="size" />
+      <img
+        v-if="showTokenImage"
+        :src="props.tokenImage"
+        :width="size"
+        :height="size"
+        alt=""
+        class="rounded-full object-cover"
+        :style="{ width: `${size}px`, height: `${size}px` }"
+        @error="tokenImageFailed = true"
+      />
+      <component :is="tokenComponent" v-else :size="size" />
     </span>
 
     <span
@@ -112,7 +132,17 @@ const badgeBorder = computed(() => Math.max(1, Math.round(size.value * 0.06)))
         outline: `${badgeBorder}px solid white`,
       }"
     >
-      <component :is="chainComponent" :size="badgeSize" />
+      <img
+        v-if="showChainImage"
+        :src="props.chainImage"
+        :width="badgeSize"
+        :height="badgeSize"
+        alt=""
+        class="rounded-full object-cover"
+        :style="{ width: `${badgeSize}px`, height: `${badgeSize}px` }"
+        @error="chainImageFailed = true"
+      />
+      <component :is="chainComponent" v-else :size="badgeSize" />
     </span>
   </span>
 </template>
