@@ -6,7 +6,7 @@ export type TokenName =
 
 export type ChainName =
   | 'ethereum' | 'solana' | 'arbitrum' | 'optimism' | 'base'
-  | 'linea' | 'hyperevm' | 'bsc' | 'mantra' | 'plasma' | 'soneium' | 'polygon'
+  | 'linea' | 'hyperevm' | 'bsc' | 'mantra' | 'plasma' | 'soneium' | 'polygon' | 'citrea' | 'fluent' | 'moca'
 
 export interface Wallet {
   name: string

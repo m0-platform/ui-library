@@ -199,6 +199,9 @@ const chains: ChainName[] = [
   "mantra",
   "plasma",
   "soneium",
+  "citrea",
+  "fluent",
+  "moca",
 ];
 
 function onConnect(wallet: Wallet) {

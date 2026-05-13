@@ -37,6 +37,9 @@ import MIconChainMantra from './chains/MIconChainMantra.vue'
 import MIconChainPlasma from './chains/MIconChainPlasma.vue'
 import MIconChainSoneium from './chains/MIconChainSoneium.vue'
 import MIconChainPolygon from './chains/MIconChainPolygon.vue'
+import MIconChainCitrea from './chains/MIconChainCitrea.vue'
+import MIconChainMoca from './chains/MIconChainMoca.vue'
+import MIconChainFluent from './chains/MIconChainFluent.vue'
 import MIconChainFallback from './chains/MIconChainFallback.vue'
 
 const tokenComponents: Record<string, unknown> = {
@@ -76,6 +79,9 @@ const chainComponents: Record<string, unknown> = {
   'plasma': MIconChainPlasma,
   'soneium': MIconChainSoneium,
   'polygon': MIconChainPolygon,
+  'citrea': MIconChainCitrea,
+  'fluent': MIconChainFluent,
+  'moca': MIconChainMoca,
 }
 
 const props = defineProps<{
