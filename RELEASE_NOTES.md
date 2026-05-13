@@ -1,16 +1,24 @@
 # Release Notes
 
+## v1.0.3
+
+### New
+
+- `MIconCompoundTokenChain` now support `tokenImage` and `chainImage` props for custom icons (fallback to default if not provided)
+
 ## v1.0.0
 
 Complete rewrite from Vite library mode to Nuxt Module architecture.
 
 ### Breaking Changes
+
 - Now a **Nuxt module** — install via `modules` in `nuxt.config.ts` instead of `app.use()`
 - Removed generic UI components (MButton, MInput, MModal, etc.) — use [Nuxt UI v4](https://ui.nuxt.com) instead
 - Tailwind theme changed from JS preset (v3) to CSS `@theme` (v4) — consumers must `@import` the theme CSS
 - Removed `vue-router` peer dependency
 
 ### New
+
 - **Auto-imports**: All components and composables are auto-imported, no manual imports needed
 - **Nuxt module**: `addComponentsDir` + `addImportsDir` for zero-config integration
 - **Tree-shaking**: Per-file ESM output via `@nuxt/module-builder`
@@ -22,6 +30,7 @@ Complete rewrite from Vite library mode to Nuxt Module architecture.
 - **Playground**: Dev playground app showcasing all components
 
 ### Components (33 total)
+
 - 14 token icons
 - 11 chain icons
 - 4 brand icons (M, wM, POWER, ZERO)
