@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.1.0
+
+### New
+
+- Added support for 3 new chains: Citrea, Fluent, and Moca
+
 ## v1.0.3
 
 ### New
