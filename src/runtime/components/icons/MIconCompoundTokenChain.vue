@@ -44,7 +44,7 @@ import MIconChainRise from "./chains/MIconChainRise.vue";
 import MIconChainFluent from "./chains/MIconChainFluent.vue";
 import MIconChainFallback from "./chains/MIconChainFallback.vue";
 
-const tokenComponents: Record<string, unknown> = {
+const tokenComponents: Record<string, Component> = {
   usdc: MIconTokenUsdc,
   usdai: MIconTokenUsdai,
   musd: MIconTokenMusd,
@@ -68,7 +68,7 @@ const tokenComponents: Record<string, unknown> = {
   mrusd: MIconTokenMrusd,
 };
 
-const chainComponents: Record<string, unknown> = {
+const chainComponents: Record<string, Component> = {
   ethereum: MIconChainEthereum,
   solana: MIconChainSolana,
   arbitrum: MIconChainArbitrum,
