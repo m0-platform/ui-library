@@ -1,5 +1,11 @@
 # Release Notes
 
+## v1.2.0
+
+### New
+
+- Added support for Monad and Rise chains.
+
 ## v1.1.0
 
 ### New
