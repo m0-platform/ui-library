@@ -1,5 +1,17 @@
 # Release Notes
 
+## v1.2.1
+
+### New
+
+- Add lazy loading, async decoding, and no-referrer policy to all external loaded chain icons (Citrea, Fluent, Moca, Monad, Rise)
+
+## v1.2.0
+
+### New
+
+- Added support for Monad and Rise chains.
+
 ## v1.1.0
 
 ### New

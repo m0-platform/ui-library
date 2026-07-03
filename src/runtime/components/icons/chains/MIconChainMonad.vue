@@ -7,10 +7,10 @@ defineProps<{
 
 <template>
   <img
-    src="https://green-obedient-albatross-155.mypinata.cloud/ipfs/bafkreiam5jndlyhh4owaktg56wofifdmm5x5v7kdvsndgjzoidzyzocskq"
+    src="https://green-obedient-albatross-155.mypinata.cloud/ipfs/bafkreiffdmhonsp3ouefx7ia56vetxh2ddy6dl3n2cg6377si2kvvzxq5u"
     :width="size ?? 24"
     :height="size ?? 24"
-    :alt="alt || 'Soneium'"
+    :alt="alt || 'Monad'"
     class="rounded-full"
     loading="lazy"
     decoding="async"
