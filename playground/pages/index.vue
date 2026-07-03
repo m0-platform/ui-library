@@ -202,6 +202,8 @@ const chains: ChainName[] = [
   "citrea",
   "fluent",
   "moca",
+  "monad",
+  "rise",
 ];
 
 function onConnect(wallet: Wallet) {
