@@ -12,5 +12,8 @@ defineProps<{
     :height="size ?? 24"
     :alt="alt || 'Monad'"
     class="rounded-full"
+    loading="lazy"
+    decoding="async"
+    referrerpolicy="no-referrer"
   />
 </template>

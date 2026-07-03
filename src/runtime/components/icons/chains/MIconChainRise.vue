@@ -11,6 +11,9 @@ defineProps<{
     :width="size ?? 24"
     :height="size ?? 24"
     :alt="alt || 'Rise'"
+    loading="lazy"
+    decoding="async"
+    referrerpolicy="no-referrer"
     class="rounded-full"
   />
 </template>
